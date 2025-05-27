@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>DevifyX Shop</h1>
+      <div class="cart-icon" tabindex="0">
+        🛒 <span id="cart-count">0</span>
+        <div id="cart-preview" class="hidden">
+          <h3>Cart Preview</h3>
+          <div id="cart-items"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-page">
+      <!-- First Row: Product 1 -->
+      <div class="product-row">
+        <!-- Product 1 -->
+        <section class="product-images">
+          <div class="zoom-container">
+            <iframe
+              width="100%"
+              height="250"
+              src="https://www.youtube.com/embed/jS6-hupji9c"
+              title="360° Sneaker View"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <img
+              id="main-image"
+              src="images/main.jpg"
+              alt="Main Product Image"
+            />
+          </div>
+          <div class="thumbnails">
+            <img
+              class="thumb"
+              src="images/thumb1.jpg"
+              alt="Thumbnail 1"
+              tabindex="0"
+            />
+            <img
+              class="thumb"
+              src="images/thumb2.jpg"
+              alt="Thumbnail 2"
+              tabindex="0"
+            />
+          </div>
+        </section>
+
+        <section class="product-details">
+          <h2 id="product-title">Awesome Sneakers</h2>
+          <p id="product-price">$99.99</p>
+          <p id="product-description">
+            Lightweight, stylish sneakers for daily wear.
+          </p>
+
+          <div class="variants">
+            <label for="color">Color:</label>
+            <select id="color"></select>
+
+            <label for="size">Size:</label>
+            <select id="size"></select>
+          </div>
+
+          <div class="quantity-selector">
+            <button id="decrease">-</button>
+            <input type="number" id="quantity" value="1" min="1" />
+            <button id="increase">+</button>
+          </div>
+
+          <button id="add-to-cart" class="sticky-button">Add to Cart</button>
+          <button id="add-to-wishlist">♡ Save for Later</button>
+        </section>
+      </div>
+
+      <section class="reviews">
+        <h3>Customer Reviews</h3>
+        <div id="reviews-list">
+          <p>★★★★☆ Great quality and super comfy!</p>
+          <p>★★★★★ Love them! Will buy again.</p>
+        </div>
+        <div id="average-rating">Average Rating: ★★★★★</div>
+        <form id="review-form">
+          <div id="star-rating">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+          </div>
+          <textarea
+            id="review-text"
+            placeholder="Write your review..."
+          ></textarea>
+          <button type="submit">Submit Review</button>
+        </form>
+      </section>
+
+      <!-- Second Row: Products 2 & 3 -->
+      <div class="product-row">
+        <!-- Product 2 -->
+        <div class="product-wrapper">
+          <section class="product-images">
+            <div class="zoom-container">
+              <iframe
+                width="100%"
+                height="250"
+                src="https://www.youtube.com/embed/8hRaQUdseug"
+                title="Casual Sneaker Video"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <img src="images/product2.jpg" alt="Casual Sneakers" />
+            </div>
+            <div class="thumbnails">
+              <img
+                class="thumb"
+                src="images/casual1.jpeg"
+                alt="Casual 1"
+                tabindex="0"
+              />
+              <img
+                class="thumb"
+                src="images/casual2.jpeg"
+                alt="Casual 2"
+                tabindex="0"
+              />
+            </div>
+          </section>
+
+          <section class="product-details">
+            <h2>Casual Comfort Shoes</h2>
+            <p>$79.99</p>
+            <p>Everyday comfort and durable sole design.</p>
+            <button class="sticky-button">Add to Cart</button>
+            <button>♡ Save for Later</button>
+          </section>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-wrapper">
+          <section class="product-images">
+            <div class="zoom-container">
+              <iframe
+                width="100%"
+                height="250"
+                src="https://www.youtube.com/embed/MHSYw3jdyTE"
+                title="Running Shoes Review"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+              <img src="images/run1.jpeg" alt="Running Sneakers" />
+            </div>
+            <div class="thumbnails">
+              <img
+                class="thumb"
+                src="images/run2.jpeg"
+                alt="Running 1"
+                tabindex="0"
+              />
+              <img
+                class="thumb"
+                src="images/run2.jpeg"
+                alt="Running 2"
+                tabindex="0"
+              />
+            </div>
+          </section>
+
+          <section class="product-details">
+            <h2>Pro Runner Sneakers</h2>
+            <p>$119.99</p>
+            <p>Engineered for speed and comfort over long runs.</p>
+            <button class="sticky-button">Add to Cart</button>
+            <button>♡ Save for Later</button>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
